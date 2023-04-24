@@ -1,0 +1,29 @@
+//Переменные //
+
+$black: #000;
+$white: #fff;
+$background: #242627;
+$accent:#7000FF;
+$text: #D8D8D8;
+$icon: #767676;
+$additional: #ffa8a8;
+$input: #3A3B3C;
+
+
+// Адаптив ///
+
+@mixin phone {
+	@media (max-width: 600px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) { @content; }
+}
+
+@mixin desctop {
+  @media (max-width: 1200px) { @content; }
+}
+
+@mixin lg {
+  @media (max-width: 1440px) { @content; }
+}

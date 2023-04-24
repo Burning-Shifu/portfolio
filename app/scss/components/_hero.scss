@@ -1,0 +1,25 @@
+.hero {
+
+  &__inner {
+    padding: 95px 60px 75px;
+    background-image: url(../../img/my-photo-bg.png), url(../../img/icons/hero-bg-figures-top.svg), url(../../img/icons/hero-bg-figures-bottom.svg);
+    background-repeat: no-repeat;
+    background-position-y: 100%, 5%, 95%;
+    background-position-x: 100%, 35%;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 48px;
+    color: $white;
+  }
+
+  &__text {
+    padding-bottom: 40px;
+  }
+
+  &__btn {
+    max-width: 220px;
+  }
+}

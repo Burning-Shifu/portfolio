@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $text;
+  // background-color: #28252E;
+  background-color: #211e27;
+
+	@include phone {
+		// font-size: 16px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	// padding: 0 15px;
+
+	@include tablet {
+		padding: 0;
+	}
+}
+
+.main {}
+
+p {
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	outline: transparent;
+	cursor: pointer;
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+svg {
+	fill: $icon;
+	// stroke: $icon;
+	width: 18px;
+	height: 18px;
+}
+
+.container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.section {
+	padding: 50px 0;
+
+	@include tablet {
+		padding: 25px 0;
+	}
+}
+
+// helpers
+
+.bold {
+	font-weight: 700;
+}
+
+.accent {
+	color: $accent;
+}
+
+/// повторяющиеся
+
+.block {
+	background-color: $background;
+	box-shadow: #372537db 0px 6px 20px 4px;
+}
+
+.title {
+	margin: 0 0 25px;
+	color: $white;
+  font-family: 'BalooBhai2', sans-serif;
+	font-size: 40px;
+	line-height: 1.3;
+	font-weight: 400;
+	text-align: center;
+
+	@include phone {
+		font-size: 26px;
+	}
+}
+
+.btn {
+	display: block;
+	padding: 16px 30px;
+	font-weight: 500;
+	color: $text;
+	background-color: $accent;
+	// text-align: center;
+	text-transform: uppercase;
+
+	border: none;
+	border-radius: 5px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+	outline: transparent;
+
+	&:hover {
+		box-shadow: 0px 10px 10px rgba(148, 7, 7, 0.5);
+	}
+
+	&:active {
+		box-shadow: inset 0px 10px 10px rgba(148, 7, 7, 0.5);
+	}
+}
+
+.text {
+	text-align: center;
+	margin: 0 auto 30px;
+}

@@ -1,0 +1,33 @@
+.skills {
+
+  &__inner {
+  }
+
+  &__text {}
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 35px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    --size: 75px;
+
+    display: block;
+    max-width: var(--size);
+    width: 100%;
+    height: var(--size);
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+}

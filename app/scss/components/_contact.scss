@@ -1,0 +1,81 @@
+.contact {
+
+  &__inner {
+  }
+
+  &__content {
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__form {
+    padding: 25px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px 15px;
+    color: $text;
+    border: none;
+    background-color: $input;
+  }
+
+  &__textarea {
+    height: 150px;
+  }
+
+  &__block {
+    padding: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &--bg {
+      // background-image: url("../../img/icons/Flag_of_Alberta-tr.svg");
+      // background-repeat: no-repeat;
+      // background-position-x: 50%;
+    }
+  }
+
+  &__icon {
+    --size: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto 35px;
+    background-color: $accent;
+    border-radius: 50%;
+  }
+
+  &__svg {
+    fill: $white;
+  }
+
+  &__stroke {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__stroke-title {
+    font-weight: 500;
+  }
+
+  &__stroke-text {
+    font-size: 16px;
+  }
+}
