@@ -6,22 +6,17 @@
   height: 100vh;
   padding: 50px 40px;
 
+  @include lg {
+		display: none;
+	}
+  &__photo-border,
   &__photo {
     --size: 150px;
-
-    display: block;
-    max-width: var(--size);
-    width: 100%;
-    height: var(--size);
-    margin: 0 auto 30px;
-    object-position: top;
-    object-fit: cover;
-    border-radius: 50%;
   }
 
   &__name {
     margin-bottom: 10px;
-    color: $white;
+    color: var(--white);
     text-align: center;
   }
 
@@ -29,38 +24,6 @@
     margin-bottom: 15px;
     font-size: 16px;
     text-align: center;
-  }
-
-  &__socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  &__socials-item {
-  }
-
-  &__link {
-    --size: 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--size);
-    height: var(--size);
-    background-color: $accent;
-    border-radius: 50%;
-
-    &:hover {
-      .info__link-svg {
-        fill: $additional;
-      }
-    }
-  }
-
-  &__link-svg {
-    fill: $background;
-    transition: fill 0.3s;
   }
 
   &__block {
@@ -78,7 +41,7 @@
       right: 0;
       left: 0;
       height: 5px;
-      box-shadow: $accent 0 0 0 2px;
+      box-shadow: var(--accent) 0 0 0 2px;
       border-radius: 10px;
     }
 
@@ -89,14 +52,14 @@
       right: 3px;
       left: 3px;
       height: 1px;
-      background-color: $additional;
+      background-color: var(--additional);
       border-radius: 10px;
     }
   }
 
   &__title {
     margin-bottom: 10px;
-    color: $white;
+    color: var(--white);
   }
 
   &__list {

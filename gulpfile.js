@@ -1,21 +1,18 @@
-const { src, dest, watch, series, parallel } = require('gulp'),
-			scss = require('gulp-sass'),
-			autoprefixer = require('gulp-autoprefixer'),
-			cssmin = require('gulp-cssmin'),
-			concat = require('gulp-concat'),
-			browsersync = require('browser-sync').create(),
-			group_media = require('gulp-group-css-media-queries'),
-			replace = require('gulp-replace'),
-			fileInclude = require('gulp-file-include'),
-			// uglify = require('gulp-uglify-es').default,
-			// babel = require('gulp-babel'),
-			del = require('del'),
-			// ttf2woff = require('gulp-ttf2woff'),
-			// ttf2woff2 = require('gulp-ttf2woff2'),
-			imagemin = require("gulp-imagemin"),
-			webp = require('gulp-webp'),
-			webphtml = require('gulp-webp-html-nosvg');
-// let fs = require('fs');
+const { src, dest, watch, series, parallel } = require('gulp');
+const scss = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cssmin = require('gulp-cssmin');
+const concat = require('gulp-concat');
+const browsersync = require('browser-sync');
+const group_media = require('gulp-group-css-media-queries');
+const replace = require('gulp-replace');
+const fileInclude = require('gulp-file-include');
+const uglify = require('gulp-uglify-es').default;
+const del = require('del');
+const imagemin = require("gulp-imagemin");
+const webp = require('gulp-webp');
+const webphtml = require('gulp-webp-html-nosvg');
+// let fs = import('fs');
 
 //автообновление браузера //
 function browserSync() {
@@ -87,6 +84,7 @@ function scripts() {
 function stylesLibs() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
+		'node_modules/swiper/swiper-bundle.css',
 	])
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 5 versions'],
@@ -101,13 +99,13 @@ function stylesLibs() {
 
 // Собирает все js плагинов, минифицирует и закидывает в dist/js с именем libs.min.js //
 async function scriptsLibs() {
-	// return src([
-	// 	'node_modules/swiper/swiper-bundle.js',
-	// ])
-	// 	.pipe(uglify())
-	// 	.pipe(concat('libs.min.js'))
-	// 	.pipe(dest('dist/js/'))
-	// 	.pipe(browsersync.stream())
+	return src([
+		'node_modules/swiper/swiper-bundle.js',
+	])
+		.pipe(uglify())
+		.pipe(concat('libs.min.js'))
+		.pipe(dest('dist/js/'))
+		.pipe(browsersync.stream())
 }
 
 // Следит за пикчами в app/img, сжимает и конвертирует их в .webp, отправляет в dist/img. Оригинальные файлы сжимает и отправляет в dist/img. Все удаленные файлы в папке app/img удалятся из папки dist/img при следующем запуске gulp //

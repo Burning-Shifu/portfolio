@@ -6,6 +6,10 @@
   &__content {
     justify-content: space-between;
     gap: 30px;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__form {
@@ -22,9 +26,9 @@
     width: 100%;
     margin-bottom: 25px;
     padding: 15px 15px;
-    color: $text;
+    color: var(--text-color);
     border: none;
-    background-color: $input;
+    background-color: var(--input-color);
   }
 
   &__textarea {
@@ -41,7 +45,7 @@
     &--bg {
       // background-image: url("../../img/icons/Flag_of_Alberta-tr.svg");
       // background-repeat: no-repeat;
-      // background-position-x: 50%;
+      // background-position-x: 100%;
     }
   }
 
@@ -54,17 +58,18 @@
     width: var(--size);
     height: var(--size);
     margin: 0 auto 35px;
-    background-color: $accent;
+    background-color: var(--accent);
     border-radius: 50%;
   }
 
   &__svg {
-    fill: $white;
+    fill: var(--white);
   }
 
   &__stroke {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &:not(:last-child) {
       margin-bottom: 12px;

@@ -21,37 +21,42 @@
 				<nav class="menu d-flex">
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a href="" class="menu__link">
+							<a href="#hero" class="menu__link">
+								To start
 								<svg class="menu__svg">
 									<use href="#home"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="menu__item">
-							<a href="" class="menu__link">
+							<a href="#skills" class="menu__link">
+								Skills
 								<svg class="menu__svg">
-									<use href="#edu"></use>
+									<use href="#skill-icon"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="menu__item">
-							<a href="" class="menu__link">
+							<a href="#projects" class="menu__link">
+								Projects
 								<svg class="menu__svg">
-									<use href="#"></use>
+									<use href="#projects-icon"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="menu__item">
-							<a href="" class="menu__link">
+							<a href="#work" class="menu__link">
+								Work Experience
 								<svg class="menu__svg">
-									<use href="#"></use>
+									<use href="#work-icon"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="menu__item">
-							<a href="" class="menu__link">
+							<a href="#contact" class="menu__link">
+								Contact
 								<svg class="menu__svg">
-									<use href="#"></use>
+									<use href="#contact-icon"></use>
 								</svg>
 							</a>
 						</li>
@@ -61,24 +66,28 @@
 
 			<section class="info block">
 				<div class="info__block">
-					<img src="img/my-photo.jpg" alt="" class="info__photo">
+					<div class="photo-round-border info__photo-border">
+						<img src="img/my-photo-bg.png" alt="" class="photo-round info__photo">
+					</div>
 
 					<div class="info__name">Kristina Protsiak</div>
 					<div class="info__position">Front-end Developer</div>
 
-					<ul class="info__socials">
-						<li class="info__socials-item">
-							<a href="https://github.com/Burning-Shifu" class="info__link">
-								<svg class="info__link-svg">
+					<ul class="icon-links">
+						<li class="icon-links__item">
+							<a href="https://github.com/Burning-Shifu" class="icon-links__link">
+								<svg class="icon-links__svg">
 									<use href="#github"></use>
 								</svg>
+								<span class="visually-hidden">Me on Github</span>
 							</a>
 						</li>
-						<li class="info__socials-item">
-							<a href="https://www.linkedin.com/in/kristina-protsiak-bb4a88257/" class="info__link">
-								<svg class="info__link-svg">
+						<li class="icon-links__item">
+							<a href="https://www.linkedin.com/in/kristina-protsiak-bb4a88257/" class="icon-links__link">
+								<svg class="icon-links__svg">
 									<use href="#linkedin"></use>
 								</svg>
+								<span class="visually-hidden">Me on LinkedIn</span>
 							</a>
 						</li>
 					</ul>
@@ -124,12 +133,15 @@
 
 			<main class="main">
 
-				<section class="hero">
+				<section class="hero" id="hero">
 					<div class="container">
 						<div class="hero__inner block">
-							<div class="col-7">
+							<div class="col-7 col-md-12">
+								<div class="photo-round-border hero__photo-border">
+									<img src="img/my-photo-bg.png" alt="" class="photo-round hero__photo-mob">
+								</div>
 								<h1 class="title hero__title">
-									I’m Kristina Protsiak
+									I’m Kristina Protsiak <br>
 									<span class="accent">Front-end</span> Developer
 								</h1>
 								<!-- <p class="hero__text">
@@ -138,7 +150,12 @@
 								<p class="hero__text">
 									Hi, I'm frontend developer who is truly passionate about bringing ideas to life through clean, efficient code. I love learning new technologies and continuously strive to grow my skills in this ever-evolving field. Being a frontend developer allows me to blend creativity with technical expertise, and I'm always excited to take on new challenges. Let's create something amazing together!
 								</p>
-								<a href="path_to_file" download="Resume_Protsiak" class="btn hero__btn">Get my resume</a>
+								<a href="path_to_file" download="Resume_Protsiak" class="btn hero__btn">
+									Get my resume
+									<svg class="hero__btn-svg">
+										<use href="#download"></use>
+									</svg>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -173,23 +190,23 @@
 							</ul>
 							<ul class="skills__list block">
 								<li class="skills__item">
+									<img src="img/icons/skills/git-black.svg" class="skills__img" alt="">
+									<span class="skills__name">Git</span>
+								</li>
+								<li class="skills__item">
 									<img src="img/icons/skills/gulp-color.svg" class="skills__img" alt="">
 									<span class="skills__name">Gulp</span>
 								</li>
 								<li class="skills__item">
-									<img src="img/icons/skills/gulp-color.svg" class="skills__img" alt="">
-									<span class="skills__name">Git</span>
-								</li>
-								<li class="skills__item">
-									<img src="img/icons/skills/html5-color.svg" class="skills__img" alt="">
-									<span class="skills__name">Vuetify</span>
-								</li>
-								<li class="skills__item">
-									<img src="img/icons/skills/html5-color.svg" class="skills__img" alt="">
+									<img src="img/icons/skills/sass-color.svg" class="skills__img" alt="">
 									<span class="skills__name">Sass</span>
 								</li>
 								<li class="skills__item">
-									<img src="img/icons/skills/html5-color.svg" class="skills__img" alt="">
+									<img src="img/icons/skills/vuetify-color.svg" class="skills__img" alt="">
+									<span class="skills__name">Vuetify</span>
+								</li>
+								<li class="skills__item">
+									<img src="img/icons/skills/bootstrap-color.svg" class="skills__img" alt="">
 									<span class="skills__name">Bootstrap</span>
 								</li>
 							</ul>
@@ -203,116 +220,193 @@
 							<h2 class="title">
 								Portfolio
 							</h2>
-							<ul class="projects__list">
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/hotelcats.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="burning-shifu.github.io/hotelcats/" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="https://github.com/Burning-Shifu/hotelcats" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+
+							<div class="swiper projects__slider">
+								<ul class="swiper-wrapper projects__list">
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/hotelcats.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
 										</div>
-									</div>
-									<div class="projects__item-name">Cat Hotel</div>
-								</li>
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/starteam.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="burning-shifu.github.io/starteam/" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="https://github.com/Burning-Shifu/starteam" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+
+										<div class="projects__item-info">
+											<p class="projects__item-name">Cat Hotel</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/hotelcats/index.html" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/hotelcats" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
 										</div>
-									</div>
-									<div class="projects__item-name">Starteam</div>
-								</li>
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/work-tutor.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="burning-shifu.github.io/work-tutor/" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="https://github.com/Burning-Shifu/work-tutor" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/starteam.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
 										</div>
-									</div>
-									<div class="projects__item-name">Work Tutor</div>
-								</li>
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/hungry-people.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="burning-shifu.github.io/HungryPeople/" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="https://github.com/Burning-Shifu/HungryPeople" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+										<div class="projects__item-info">
+											<p class="projects__item-name">Starteam</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/starteam/index.html" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/starteam" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
 										</div>
-									</div>
-									<div class="projects__item-name">Hungry People</div>
-								</li>
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/zebracall.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="burning-shifu.github.io/zebracall/" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="https://github.com/Burning-Shifu/zebracall" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/work-tutor.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
 										</div>
-									</div>
-									<div class="projects__item-name">Zebracall</div>
-								</li>
-								<li class="projects__item block">
-									<div class="projects__item-content">
-										<img src="img/projects/diet-ai.jpg" class="projects__item-img" alt="project illustration">
-										<div class="projects__item-hover">
-											<a href="#" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#link"></use>
-												</svg>
-											</a>
-											<a href="#" class="projects__item-link">
-												<svg class="projects__item-icon">
-													<use href="#github"></use>
-												</svg>
-											</a>
+										<div class="projects__item-info">
+											<p class="projects__item-name">Work Tutor</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/work-tutor/index.html" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/work-tutor" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
 										</div>
-									</div>
-									<div class="projects__item-name">Diet AI</div>
-								</li>
-							</ul>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/hungry-people.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
+										</div>
+										<div class="projects__item-info">
+											<p class="projects__item-name">Hungry People</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/HungryPeople/index.html" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/HungryPeople" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/zebracall.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
+										</div>
+										<div class="projects__item-info">
+											<p class="projects__item-name">Zebracall</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/zebracall/index.html" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/zebracall" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
+											<img src="img/projects/diet-ai.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">text</p>
+											</div>
+										</div>
+										<div class="projects__item-info">
+											<p class="projects__item-name">Diet AI</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="" target="_blank">
+														<svg class="icon-links__svg">
+															<use href="#github"></use>
+														</svg>
+														<span class="visually-hidden">Project on Github</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+								</ul>
+								<div class="swiper-pagination projects__slider-pagination"></div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -323,16 +417,21 @@
 							<h2 class="title">
 								Work History
 							</h2>
-							<p class="text work__text col-7"></p>
 							<ul class="work__list block">
 								<li class="work__item">
 									<div class="col-5">
 										<span class="work__title">Frontend Developer</span>
 										<span class="work__date">Oct 2020 – Nov 2022</span>
 									</div>
-									<div class="col-7">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.
+									<div class="col-7 col-md-10">
+										<p class="work__text">
+											My first job as a Frontend developer. Here I honed my skills in coding with HTML, CSS, JavaScript and Vue, creating a multitude of mobile and desktop-compatible websites.
+										</p>
+										<p class="work__text">
+											My teamwork led to improved user experiences and significant increase in sales. Task management and working within deadlines were key responsibilities, alongside optimizing websites.
+										</p>
+										<p class="work__text">
+											I also had the opportunity to optimize our product for the Latin American market, which in turn gave a boost to our annual sales.
 										</p>
 									</div>
 								</li>
@@ -341,9 +440,15 @@
 										<span class="work__title">Public Relations Specialist</span>
 										<span class="work__date">Sep 2017 – May 2020</span>
 									</div>
-									<div class="col-7">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.
+									<div class="col-7 col-md-10">
+										<p class="work__text">
+											I effectively managed the public image and reputation of the organization. I built strong relationships with media representatives and crafted compelling press releases, securing positive media coverage.
+										</p>
+										<p class="work__text">
+											By leveraging various social media platforms, I clarified complex laws for the general public, providing answers to their questions. Regular collaboration with experts from other departments was vital, ensuring I had the necessary information to solve people's issues effectively.
+										</p>
+										<p class="work__text">
+											My role demanded excellent communication skills, creative thinking, and a results-driven approach.
 										</p>
 									</div>
 								</li>
@@ -359,7 +464,7 @@
 								Happy to hear from you!
 							</h2>
 							<div class="contact__content row">
-								<div class="col-6">
+								<div class="col-6 col-md-8 ">
 									<form action="" class="contact__form block">
 										<label for="name" class="contact__label">Your Name</label>
 										<input type="text" class="contact__input" id="name">
@@ -374,7 +479,7 @@
 									</form>
 								</div>
 
-								<div class="col-5">
+								<div class="col-5 col-md-8">
 									<div class="block contact__block contact__block--bg">
 										<span class="contact__icon">
 											<svg class="contact__svg">
@@ -409,6 +514,29 @@
 											<span class="contact__stroke-title">Telegram:</span>
 											<span class="contact__stroke-text">@Burning_Shifu</span>
 										</div>
+										<div class="contact__stroke">
+											<span class="contact__stroke-title">Social links:</span>
+											<span class="contact__stroke-text">
+												<ul class="icon-links">
+													<li class="icon-links__item">
+														<a href="https://github.com/Burning-Shifu" class="icon-links__link">
+															<svg class="icon-links__svg">
+																<use href="#github"></use>
+															</svg>
+															<span class="visually-hidden">Me on Github</span>
+														</a>
+													</li>
+													<li class="icon-links__item">
+														<a href="https://www.linkedin.com/in/kristina-protsiak-bb4a88257/" class="icon-links__link">
+															<svg class="icon-links__svg">
+																<use href="#linkedin"></use>
+															</svg>
+															<span class="visually-hidden">Me on LinkedIn</span>
+														</a>
+													</li>
+												</ul>
+											</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -418,18 +546,36 @@
 
 			</main>
 
-
-
 		</div>
 	</div>
 
-	<!-- <script src="js/libs.min.js"></script> -->
+	<script src="js/libs.min.js"></script>
 	<script src="js/script.js"></script>
 
-	<svg style="height: 0; width: 0; position: absolute; visibility: hidden;" xmlns="http://www.w3.org/2000/svg">
+	<svg style="height: 0; width: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
 		<symbol id="home" viewBox="0 0 18 18">
 			<title>Home</title>
 			<path d="M15 14.9999C15 15.1989 14.921 15.3896 14.7803 15.5303C14.6397 15.6709 14.4489 15.7499 14.25 15.7499H3.75C3.55109 15.7499 3.36032 15.6709 3.21967 15.5303C3.07902 15.3896 3 15.1989 3 14.9999V8.24994H0.75L8.49525 1.20894C8.63333 1.0833 8.81331 1.01367 9 1.01367C9.18669 1.01367 9.36667 1.0833 9.50475 1.20894L17.25 8.24994H15V14.9999Z"></path>
+		</symbol>
+
+		<symbol id="projects-icon" viewBox="0 0 18 18">
+			<title>projects-icon</title>
+			<path d="M17.5 4.28699V4.5H12V0H12.2603C12.5338 0 12.7962 0.0889101 12.9896 0.247113L17.198 3.69035C17.3913 3.8486 17.5 4.06321 17.5 4.28699ZM11.6562 5.625C11.0891 5.625 10.625 5.24531 10.625 4.78125V0H2.03125C1.4617 0 1 0.377754 1 0.84375V17.1562C1 17.6222 1.4617 18 2.03125 18H16.4688C17.0383 18 17.5 17.6222 17.5 17.1562V5.625H11.6562ZM6.29401 14.0803C6.27317 14.0984 6.24815 14.1131 6.22039 14.1234C6.19263 14.1337 6.16266 14.1394 6.13221 14.1402C6.10175 14.141 6.0714 14.1368 6.04289 14.1281C6.01437 14.1193 5.98826 14.106 5.96603 14.0889L3.17882 11.951C3.15567 11.9332 3.13722 11.9118 3.1246 11.888C3.11199 11.8641 3.10548 11.8384 3.10548 11.8125C3.10548 11.7865 3.11199 11.7608 3.1246 11.737C3.13722 11.7132 3.15567 11.6917 3.17882 11.674L5.96603 9.53606C5.98826 9.51901 6.01437 9.50571 6.04289 9.49691C6.0714 9.48812 6.10175 9.484 6.13221 9.48481C6.16266 9.48561 6.19263 9.49131 6.22039 9.50159C6.24815 9.51187 6.27317 9.52652 6.29401 9.54471L7.13529 10.2789C7.15655 10.2975 7.17304 10.3194 7.18377 10.3432C7.19451 10.3671 7.19927 10.3925 7.19778 10.4179C7.19629 10.4433 7.18858 10.4682 7.1751 10.4911C7.16161 10.514 7.14264 10.5345 7.11931 10.5513L5.36777 11.8125L7.11931 13.0737C7.14264 13.0905 7.16161 13.111 7.1751 13.1339C7.18858 13.1568 7.19629 13.1817 7.19778 13.2071C7.19927 13.2325 7.19451 13.2579 7.18377 13.2818C7.17304 13.3056 7.15655 13.3275 7.13529 13.3461L6.29401 14.0803ZM8.49809 15.8549L7.31847 15.5747C7.25937 15.5607 7.20951 15.528 7.17985 15.4839C7.15019 15.4398 7.14316 15.3878 7.1603 15.3394L9.8003 7.89947C9.81747 7.85112 9.85741 7.81032 9.91133 7.78606C9.96525 7.76179 10.0287 7.75603 10.0878 7.77006L11.2674 8.05025C11.2967 8.05721 11.324 8.06881 11.3478 8.08439C11.3716 8.09998 11.3914 8.11924 11.406 8.14109C11.4207 8.16294 11.43 8.18694 11.4334 8.21172C11.4367 8.2365 11.434 8.26158 11.4256 8.28552L8.78555 15.7255C8.77707 15.7494 8.76291 15.7718 8.74387 15.7913C8.72483 15.8107 8.70129 15.8269 8.6746 15.8389C8.6479 15.851 8.61857 15.8586 8.58829 15.8613C8.558 15.864 8.52735 15.8619 8.49809 15.8549ZM15.4071 11.951L12.6199 14.0889C12.5977 14.106 12.5716 14.1193 12.5431 14.1281C12.5145 14.1368 12.4842 14.141 12.4537 14.1402C12.4233 14.1394 12.3933 14.1337 12.3655 14.1234C12.3378 14.1131 12.3128 14.0984 12.2919 14.0803L11.4506 13.346C11.4293 13.3275 11.4129 13.3056 11.4021 13.2817C11.3914 13.2579 11.3866 13.2325 11.3881 13.2071C11.3896 13.1817 11.3973 13.1568 11.4108 13.1338C11.4243 13.1109 11.4433 13.0905 11.4666 13.0737L13.2182 11.8125L11.4666 10.5513C11.4433 10.5345 11.4243 10.514 11.4108 10.4911C11.3974 10.4682 11.3896 10.4433 11.3882 10.4179C11.3867 10.3925 11.3914 10.3671 11.4022 10.3432C11.4129 10.3194 11.4294 10.2975 11.4506 10.2789L12.292 9.54471C12.3128 9.52652 12.3378 9.51187 12.3656 9.50159C12.3934 9.49131 12.4233 9.48561 12.4538 9.48481C12.4842 9.484 12.5146 9.48812 12.5431 9.49691C12.5716 9.50571 12.5977 9.51901 12.62 9.53606L15.4072 11.674C15.4303 11.6917 15.4488 11.7132 15.4614 11.737C15.474 11.7608 15.4805 11.7865 15.4805 11.8125C15.4805 11.8385 15.474 11.8641 15.4613 11.888C15.4487 11.9118 15.4303 11.9332 15.4071 11.951Z"/>
+		</symbol>
+
+		<symbol id="skill-icon" viewBox="0 0 32 32">
+			<title>axe-swing</title>
+			<path d="M30.093 12.692c-1.774-6.829-7.85-11.274-14.417-11.067-5.525-0.33-11.117 2.011-14.511 6.444 1.63-1.388 3.567-2.394 5.631-2.968-3.891 3.356-5.914 8.693-4.979 14.080 0.068-1.766 0.488-3.479 1.206-5.041 0-0.001 0-0.001 0-0.002 0.072 3.219 1.154 6.384 3.263 8.961-2.401-4.803-1.4-12.225 2.622-15.115-0.045 0.032-0.089 0.065-0.133 0.099 0.729-0.373 1.504-0.677 2.321-0.903 6.692-1.849 13.557 2.267 15.352 9.165 1.148 4.415-0.069 8.9-2.847 12.043 0.169-0.191 0.331-0.386 0.488-0.587-3.353-0.632-3.327-3.939 0.875-7.183l-3.074-2.282c-0.123 0.361-0.253 0.699-0.39 1.014l-12.063-8.505c-1.168-0.674-1.907 0.703-0.984 1.297l12.272 8.652c-2.045 3.074-4.905 2.424-6.17-0.921-3.37 2.851-1.807 7.954 1.432 10.21 2.952 2.057 7.354 1.625 9.29-1.975 4.27-3.602 6.34-9.562 4.818-15.417zM16.088 1.655c0.015 0.001 0.031 0.003 0.046 0.004-0.015-0.001-0.031-0.003-0.046-0.004zM16.506 1.695c0.018 0.002 0.036 0.004 0.054 0.006-0.018-0.002-0.036-0.004-0.054-0.006zM16.943 1.748c0.011 0.001 0.021 0.003 0.032 0.004-0.011-0.002-0.022-0.003-0.032-0.004zM17.508 6.136c-0.090-0.047-0.18-0.092-0.271-0.137 0.091 0.045 0.181 0.090 0.271 0.137zM17.14 5.952c-0.066-0.032-0.131-0.063-0.197-0.093 0.066 0.031 0.131 0.062 0.197 0.093zM16.837 5.809c-0.067-0.031-0.135-0.060-0.202-0.090 0.068 0.029 0.135 0.059 0.202 0.090zM16.541 5.679c-0.097-0.041-0.195-0.082-0.293-0.121 0.098 0.039 0.195 0.080 0.293 0.121zM16.21 5.543c-0.087-0.034-0.174-0.068-0.261-0.1 0.087 0.032 0.174 0.066 0.261 0.1zM15.851 5.407c-0.069-0.025-0.138-0.050-0.207-0.074 0.069 0.024 0.138 0.049 0.207 0.074zM14.53 4.998c-0.074-0.019-0.148-0.037-0.222-0.055 0.074 0.018 0.148 0.036 0.222 0.055zM15.54 5.298c-0.073-0.025-0.147-0.049-0.221-0.072 0.074 0.024 0.147 0.048 0.221 0.072zM15.236 5.199c-0.101-0.032-0.203-0.062-0.305-0.092 0.102 0.029 0.203 0.060 0.305 0.092zM14.888 5.095c-0.088-0.025-0.176-0.049-0.264-0.072 0.088 0.023 0.176 0.047 0.264 0.072zM7.457 4.933c-0.221 0.051-0.44 0.107-0.658 0.167 0.218-0.061 0.437-0.117 0.658-0.167zM10.832 4.541c-0.102 0-0.203 0.002-0.305 0.004 0.102-0.002 0.203-0.004 0.305-0.004zM10.473 4.546c-0.095 0.003-0.19 0.006-0.286 0.011 0.095-0.004 0.19-0.008 0.286-0.011zM10.147 4.559c-0.222 0.011-0.444 0.027-0.666 0.047 0.221-0.021 0.443-0.036 0.666-0.047zM9.472 4.607c-0.105 0.010-0.21 0.021-0.314 0.033 0.105-0.012 0.209-0.023 0.314-0.033zM9.117 4.644c-0.102 0.012-0.203 0.025-0.305 0.039 0.101-0.014 0.203-0.027 0.305-0.039zM8.794 4.686c-0.223 0.031-0.445 0.067-0.667 0.108 0.221-0.041 0.444-0.077 0.667-0.108zM8.122 4.794c-0.106 0.020-0.211 0.040-0.317 0.062 0.105-0.022 0.211-0.043 0.317-0.062zM7.775 4.863c-0.106 0.022-0.211 0.045-0.317 0.069 0.105-0.024 0.211-0.047 0.317-0.069zM3.124 11.997c0.013-0.115 0.028-0.231 0.044-0.346-0.016 0.115-0.030 0.23-0.044 0.346zM3.042 12.966c0.002-0.032 0.003-0.065 0.005-0.097-0.002 0.032-0.003 0.065-0.005 0.097zM3.061 12.667c0.004-0.054 0.008-0.107 0.013-0.161-0.005 0.054-0.009 0.107-0.013 0.161zM3.088 12.337c0.007-0.070 0.014-0.14 0.022-0.211-0.008 0.070-0.015 0.14-0.022 0.211zM9.043 7.889c0.006-0.004 0.011-0.008 0.017-0.012h0c-0.006 0.004-0.011 0.008-0.017 0.012zM10.849 4.541c0.219-0.001 0.438 0.004 0.658 0.013-0.219-0.009-0.438-0.014-0.658-0.013zM14.213 4.92c-0.082-0.019-0.165-0.037-0.247-0.055 0.082 0.018 0.165 0.036 0.247 0.055zM13.903 4.851c-0.106-0.022-0.211-0.043-0.317-0.063 0.106 0.020 0.212 0.041 0.317 0.063zM13.547 4.782c-0.092-0.017-0.184-0.033-0.276-0.048 0.092 0.015 0.184 0.031 0.276 0.048zM13.188 4.721c-0.080-0.013-0.161-0.025-0.241-0.036 0.080 0.011 0.161 0.023 0.241 0.036zM12.865 4.673c-0.095-0.013-0.189-0.025-0.284-0.036 0.095 0.011 0.189 0.023 0.284 0.036zM12.551 4.634c-0.11-0.012-0.22-0.024-0.33-0.033 0.11 0.010 0.22 0.021 0.33 0.033zM12.192 4.598c-0.097-0.009-0.194-0.016-0.29-0.023 0.097 0.007 0.194 0.014 0.29 0.023zM11.832 4.571c-0.088-0.006-0.175-0.010-0.263-0.014 0.088 0.004 0.175 0.009 0.263 0.014zM18.227 1.972c0.021 0.004 0.042 0.009 0.062 0.014-0.021-0.005-0.042-0.009-0.062-0.014zM18.627 2.063c0.032 0.008 0.063 0.015 0.095 0.023-0.032-0.008-0.063-0.016-0.095-0.023zM19.031 2.166c0.034 0.009 0.068 0.018 0.101 0.027-0.034-0.009-0.068-0.018-0.101-0.027zM19.448 2.283c0.028 0.008 0.056 0.016 0.085 0.025-0.028-0.009-0.056-0.016-0.085-0.025zM20.328 2.57c0.026 0.009 0.052 0.019 0.079 0.029-0.026-0.010-0.052-0.020-0.079-0.029zM20.712 2.713c0.042 0.016 0.084 0.033 0.127 0.050-0.042-0.017-0.084-0.034-0.127-0.050zM21.095 2.867c0.047 0.019 0.093 0.039 0.139 0.059-0.046-0.020-0.093-0.039-0.139-0.059zM21.48 3.033c0.046 0.021 0.092 0.041 0.138 0.062-0.046-0.021-0.092-0.042-0.138-0.062zM21.876 3.217c0.040 0.019 0.079 0.038 0.119 0.057-0.040-0.019-0.079-0.038-0.119-0.057zM23.13 29.608c-0.037 0.021-0.073 0.042-0.11 0.063 0.037-0.021 0.073-0.042 0.11-0.063zM22.908 29.112c0.055-0.053 0.11-0.107 0.164-0.162-0.054 0.054-0.109 0.108-0.164 0.162zM22.319 29.647c-0.050 0.043-0.101 0.085-0.152 0.127 0.051-0.042 0.102-0.084 0.152-0.127zM23.599 28.389c-0.055 0.062-0.111 0.124-0.167 0.185 0.056-0.061 0.112-0.123 0.167-0.185zM23.427 28.58c-0.055 0.060-0.111 0.119-0.167 0.178 0.056-0.059 0.112-0.118 0.167-0.178zM23.252 28.767c-0.055 0.057-0.11 0.114-0.166 0.17 0.056-0.056 0.111-0.113 0.166-0.17zM22.889 29.13c-0.053 0.051-0.107 0.102-0.162 0.153 0.054-0.051 0.108-0.101 0.162-0.153zM22.702 29.306c-0.052 0.049-0.106 0.097-0.159 0.144 0.053-0.048 0.106-0.096 0.159-0.144zM22.512 29.479c-0.051 0.046-0.103 0.091-0.155 0.136 0.052-0.045 0.104-0.090 0.155-0.136zM21.72 30.127c-0.048 0.036-0.096 0.071-0.144 0.106 0.048-0.035 0.096-0.070 0.144-0.106zM22.122 29.811c-0.049 0.040-0.099 0.080-0.148 0.119 0.050-0.039 0.099-0.079 0.148-0.119zM21.923 29.971c-0.048 0.038-0.096 0.074-0.145 0.111 0.048-0.037 0.097-0.074 0.145-0.111zM21.804 21.556v0 0zM21.306 30.425c-0.070 0.048-0.14 0.096-0.211 0.143 0.103-0.039 0.206-0.079 0.308-0.121-0.102 0.041-0.204 0.082-0.308 0.121 0.071-0.047 0.141-0.094 0.211-0.143zM21.514 30.278c-0.049 0.035-0.099 0.070-0.149 0.105 0.050-0.035 0.1-0.070 0.149-0.105zM22.864 29.757c-0.044 0.024-0.087 0.048-0.132 0.071 0.044-0.023 0.088-0.047 0.132-0.071zM22.584 29.905c-0.048 0.025-0.097 0.050-0.146 0.074 0.049-0.024 0.097-0.049 0.146-0.074zM22.297 30.049c-0.053 0.026-0.106 0.051-0.159 0.076 0.053-0.025 0.106-0.050 0.159-0.076zM22.004 30.187c-0.058 0.027-0.116 0.052-0.174 0.078 0.058-0.026 0.116-0.052 0.174-0.078zM21.706 30.32c-0.066 0.029-0.133 0.056-0.2 0.084 0.067-0.028 0.134-0.056 0.2-0.084zM23.304 29.509c0.016-0.010 0.032-0.019 0.048-0.029-0.016 0.010-0.032 0.019-0.048 0.029zM24.057 29.032c0.008-0.005 0.015-0.010 0.023-0.015-0.008 0.005-0.015 0.010-0.023 0.015zM25.034 28.309c0.009-0.008 0.019-0.015 0.028-0.023-0.009 0.008-0.019 0.015-0.028 0.023zM24.292 28.869c0.015-0.010 0.029-0.021 0.044-0.031-0.015 0.010-0.029 0.021-0.044 0.031zM24.54 28.69c0.015-0.011 0.031-0.023 0.046-0.034-0.015 0.011-0.031 0.023-0.046 0.034zM24.788 28.503c0.014-0.011 0.027-0.021 0.041-0.032-0.014 0.011-0.027 0.021-0.041 0.032z"></path>
+		</symbol>
+
+		<symbol id="work-icon" viewBox="0 0 18 18">
+			<title>Work</title>
+			<path d="M6.75 9.75V12H11.25V9.75H16.5V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V9.75H6.75ZM8.25 8.25H9.75V10.5H8.25V8.25ZM5.25 3.75V1.5C5.25 1.30109 5.32902 1.11032 5.46967 0.96967C5.61032 0.829018 5.80109 0.75 6 0.75H12C12.1989 0.75 12.3897 0.829018 12.5303 0.96967C12.671 1.11032 12.75 1.30109 12.75 1.5V3.75H15.75C15.9489 3.75 16.1397 3.82902 16.2803 3.96967C16.421 4.11032 16.5 4.30109 16.5 4.5V8.25H11.25V6.75H6.75V8.25H1.5V4.5C1.5 4.30109 1.57902 4.11032 1.71967 3.96967C1.86032 3.82902 2.05109 3.75 2.25 3.75H5.25ZM6.75 2.25V3.75H11.25V2.25H6.75Z"/>
+		</symbol>
+
+		<symbol id="contact-icon" viewBox="0 0 18 18">
+			<title>Contact</title>
+			<path d="M4.84125 14.25L1.5 16.875V3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25H15.75C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3V13.5C16.5 13.6989 16.421 13.8897 16.2803 14.0303C16.1397 14.171 15.9489 14.25 15.75 14.25H4.84125Z"/>
 		</symbol>
 
 		<symbol id="map" viewBox="0 0 18 18">
@@ -442,9 +588,25 @@
 			<path d="M2.25 2.25H15.75C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25ZM9.045 8.76225L4.236 4.6785L3.26475 5.8215L9.05475 10.7378L14.7405 5.81775L13.7595 4.683L9.04575 8.76225H9.045Z"/>
 		</symbol>
 
-		<symbol id="link" viewBox="0 0 32 32">
+		<symbol id="link" viewBox="0 0 24 24">
 			<title>Link</title>
-			<path d="M9.239 22.889c0.195 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293l12.114-12.209c0.39-0.39 0.39-1.024 0-1.414s-1.023-0.39-1.414 0l-12.114 12.209c-0.391 0.39-0.391 1.023 0 1.414zM14.871 20.76c0.331 1.457-0.026 2.887-1.152 4.014l-4.039 3.914c-0.85 0.849-1.98 1.317-3.182 1.317s-2.332-0.468-3.182-1.317c-1.754-1.755-1.754-4.61-0.010-6.354l3.946-4.070c0.85-0.849 1.98-1.318 3.182-1.318 0.411 0 0.807 0.073 1.193 0.179l1.561-1.561c-0.871-0.407-1.811-0.619-2.754-0.619-1.663 0-3.327 0.635-4.596 1.904l-3.936 4.061c-2.538 2.538-2.538 6.654 0 9.193 1.269 1.27 2.933 1.904 4.596 1.904s3.327-0.634 4.596-1.904l4.030-3.904c1.942-1.942 2.361-4.648 1.333-7.023zM30.098 1.899c-1.27-1.269-2.933-1.904-4.596-1.904-1.664 0-3.328 0.635-4.596 1.904l-4.029 3.905c-2.012 2.013-2.423 5.015-1.244 7.439l1.552-1.552c-0.459-1.534-0.107-3.261 1.096-4.463l4.039-3.914c0.851-0.849 1.98-1.318 3.183-1.318 1.201 0 2.332 0.469 3.181 1.318 1.754 1.755 1.754 4.611 0.010 6.354l-4.039 4.039c-0.849 0.85-1.98 1.317-3.181 1.317-0.306 0-0.576 0.031-0.87-0.029l-1.593 1.594c0.796 0.331 1.613 0.436 2.463 0.436 1.663 0 3.326-0.634 4.596-1.904l4.029-4.029c2.538-2.538 2.538-6.653-0-9.192z"></path>
+			<g clip-path="url(#clip0_429_11072)">
+				<path d="M11 3.99994H4V17.9999C4 19.1045 4.89543 19.9999 6 19.9999H18C19.1046 19.9999 20 19.1045 20 17.9999V12.9999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 14.9999L20 3.99994" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 3.99994H20V8.99994" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+			<defs>
+				<clipPath id="clip0_429_11072">
+					<rect width="24" height="24"/>
+				</clipPath>
+			</defs>
+		</symbol>
+
+		<symbol id="download" viewBox="0 0 24 24">
+			<title>download</title>
+			<path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+			<polyline data-name="Right" fill="none" id="Right-2" points="7.9 12.3 12 16.3 16.1 12.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+			<line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="2.7" y2="14.2"/>
 		</symbol>
 
 		<symbol id="github" enable-background="new 0 0 24 24" viewBox="0 0 24 24">

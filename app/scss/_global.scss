@@ -20,12 +20,12 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  color: $text;
+  color: var(--text-color);
   // background-color: #28252E;
   background-color: #211e27;
 
 	@include phone {
-		// font-size: 16px;
+		font-size: 16px;
 	}
 }
 
@@ -67,8 +67,8 @@ ul {
 }
 
 svg {
-	fill: $icon;
-	// stroke: $icon;
+	fill: var(--icon-color);
+	// stroke: var(--icon-color);
 	width: 18px;
 	height: 18px;
 }
@@ -76,15 +76,20 @@ svg {
 .container {
 	max-width: 1000px;
 	width: 100%;
-	margin: 0 auto;
+	margin-left: 22%;
+  margin-right: auto;
 	padding: 0 15px;
+
+	@include lg {
+		margin-left: auto;
+	}
 }
 
 .section {
 	padding: 50px 0;
 
 	@include tablet {
-		padding: 25px 0;
+		padding: 40px 0;
 	}
 }
 
@@ -95,19 +100,37 @@ svg {
 }
 
 .accent {
-	color: $accent;
+	color: var(--accent);
+}
+
+.visually-hidden {
+	clip: rect(1px,1px,1px,1px)!important;
+	border: 0!important;
+	-webkit-clip-path: inset(50%)!important;
+	clip-path: inset(50%)!important;
+	height: 1px!important;
+	margin: -1px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	white-space: nowrap!important;
+	width: 1px!important;
 }
 
 /// повторяющиеся
 
 .block {
-	background-color: $background;
+	background-color: var(--background);
 	box-shadow: #372537db 0px 6px 20px 4px;
+
+	@include phone {
+		box-shadow: #372537db 0px 4px 13px 2px;
+	}
 }
 
 .title {
-	margin: 0 0 25px;
-	color: $white;
+	margin: 0 0 20px;
+	color: var(--white);
   font-family: 'BalooBhai2', sans-serif;
 	font-size: 40px;
 	line-height: 1.3;
@@ -115,6 +138,7 @@ svg {
 	text-align: center;
 
 	@include phone {
+		margin-bottom: 15px;
 		font-size: 26px;
 	}
 }
@@ -123,8 +147,8 @@ svg {
 	display: block;
 	padding: 16px 30px;
 	font-weight: 500;
-	color: $text;
-	background-color: $accent;
+	color: var(--text-color);
+	background-color: var(--accent);
 	// text-align: center;
 	text-transform: uppercase;
 
@@ -146,4 +170,76 @@ svg {
 .text {
 	text-align: center;
 	margin: 0 auto 30px;
+}
+
+.photo-round {
+	display: block;
+	max-width: var(--size);
+	width: 100%;
+	height: var(--size);
+	margin: 0 auto 30px;
+	object-position: top;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.photo-round-border {
+	display: block;
+	max-width: var(--size);
+	width: 100%;
+	height: var(--size);
+	margin: 0 auto 30px;
+  position: relative;
+  background: linear-gradient(to right, red, purple);
+	border-radius: 50%;
+}
+
+.photo-round,
+.photo-round-border {
+	@include phone {
+		margin-bottom: 20px;
+	}
+}
+
+.icon-links {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+
+	&__item {
+	}
+
+	&__link {
+		--size: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accent);
+    border-radius: 50%;
+
+    &:hover {
+      .icon-links__svg {
+        fill: var(--additional);
+
+				&--stroke {
+					stroke: var(--additional);
+				}
+      }
+    }
+
+	}
+
+	&__svg {
+		fill: var(--text-color);
+    transition: fill 1s;
+
+		&--stroke {
+			fill: transparent !important;
+			stroke: var(--text-color);
+			transition: stroke 1s;
+		}
+	}
 }

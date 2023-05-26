@@ -4,11 +4,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 110px;
+  max-width: 7%;
   width: 100%;
   height: 100vh;
   padding: 90px 0 75px;
-  background-color: $background;
+  background-color: var(--background);
+
+  z-index: 100;
+
+  @include desctop {
+    top: 0;
+    left: 0;
+    height: auto;
+    max-width: 100%;
+    padding: 15px;
+    box-shadow: #372537db 0px 4px 6px 1px;
+	}
 }
 
 .menu {
@@ -16,6 +27,11 @@
   &__list {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+
+    @include desctop {
+      flex-direction: row;
+    }
   }
 
   &__item {
@@ -27,8 +43,8 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    margin-bottom: 40px;
-    background-color: $text;
+    font-size: 0;
+    background-color: var(--text-color);
     border-radius: 50%;
   }
 

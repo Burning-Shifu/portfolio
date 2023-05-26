@@ -1,25 +1,79 @@
 .hero {
 
+  @include desctop {
+    padding-top: 100px;
+  }
+
   &__inner {
     padding: 95px 60px 75px;
     background-image: url(../../img/my-photo-bg.png), url(../../img/icons/hero-bg-figures-top.svg), url(../../img/icons/hero-bg-figures-bottom.svg);
     background-repeat: no-repeat;
     background-position-y: 100%, 5%, 95%;
     background-position-x: 100%, 35%;
+
+    @include tablet {
+      padding: 40px;
+      background-image: url(../../img/icons/hero-bg-figures-top.svg), url(../../img/icons/hero-bg-figures-bottom.svg);
+      background-repeat: no-repeat;
+      background-position-y: 5%, 95%;
+      background-position-x: -20%;
+      background-size: contain;
+    }
+  }
+
+  &__photo-border,
+  &__photo-mob {
+    --size: 250px;
+
+    @include phone {
+      --size:200px;
+    }
+  }
+
+  &__photo-border {
+    --size: 250px;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__title {
     margin-bottom: 15px;
     text-align: left;
     font-size: 48px;
-    color: $white;
+    color: var(--white);
+
+    @include tablet {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include phone {
+      margin-bottom: 8px;
+    }
   }
 
   &__text {
     padding-bottom: 40px;
+
+    @include tablet {
+      text-align: center;
+    }
   }
 
   &__btn {
-    max-width: 220px;
+    max-width: fit-content;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &__btn-svg {
+    stroke: var(--text-color);
+    margin-left: 5px;
+    vertical-align: middle;
   }
 }
