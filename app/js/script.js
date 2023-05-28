@@ -1,42 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // var swiper = new Swiper(".myProjects", {
-  //   slidesPerView: 2,
-  //   grid: {
-  //     rows: 2,
-  //   },
-
-
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //   },
-
-    // breakpoints: {
-    //   500: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 20,
-    //   },
-    //   600: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 30,
-    //   },
-    //   900: {
-    //     slidesPerView: 3,
-    //     grid: {
-    //       rows: 2,
-    //     }
-    //   },
-    // },
-  // });
-  // const swiper = new Swiper('.projects__slider', {
-  //   slidesPerView: 2,
-  //   spaceBetween: 30,
-  //   pagination: {
-  //       el: '.swiper-pagination',
-  //   },
-  // });
+  // slider
 
   // breakpoint where swiper will be destroyed
   // and switches to a dual-column layout
@@ -84,5 +49,73 @@ document.addEventListener('DOMContentLoaded', () => {
   // kickstart
   breakpointChecker();
 
+  // end slider
 
+  // form
+
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e) {
+    e.preventDefault();
+
+    let error = formValidate(form);
+    let formData = new FormData(form);
+
+    if (error === 0) {
+      form.classList.add('_sending');
+
+      let response = await fetch("sendmail.php", {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        form.reset();
+        form.classList.remove('_sending');
+      } else {
+        alert("Error!");
+        form.classList.remove('_sending');
+      }
+
+    } else {
+      alert("To send this form please fill all required fields")
+    }
+  }
+
+
+  function formValidate(e) {
+    let error = 0;
+    const formReq = document.querySelectorAll('._req');+
+
+    formReq.forEach((input, index) => {
+      formRemoveError(input);
+
+      if (input.classList.contains('_email')) {
+        if (validateEmail(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value.trim() === "") {
+          formAddError(input);
+          error++;
+        }
+      }
+    });
+    return error;
+  }
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+  function validateEmail(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
 });

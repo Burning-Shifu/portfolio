@@ -419,11 +419,11 @@
 							</h2>
 							<ul class="work__list block">
 								<li class="work__item">
-									<div class="col-5">
+									<div class="col-5 col-sm-12">
 										<span class="work__title">Frontend Developer</span>
 										<span class="work__date">Oct 2020 – Nov 2022</span>
 									</div>
-									<div class="col-7 col-md-10">
+									<div class="col-7 col-md-12">
 										<p class="work__text">
 											My first job as a Frontend developer. Here I honed my skills in coding with HTML, CSS, JavaScript and Vue, creating a multitude of mobile and desktop-compatible websites.
 										</p>
@@ -465,15 +465,22 @@
 							</h2>
 							<div class="contact__content row">
 								<div class="col-6 col-md-8 ">
-									<form action="" class="contact__form block">
-										<label for="name" class="contact__label">Your Name</label>
-										<input type="text" class="contact__input" id="name">
+									<form action="#" class="contact__form block" id="contact-form">
 
-										<label for="email" class="contact__label">Your Email</label>
-										<input type="email" class="contact__input" id="email">
+										<div class="contact__item">
+											<label for="formName" class="contact__label">Your Name</label>
+											<input type="text" class="contact__input _req" id="formName" name="name">
+										</div>
 
-										<label for="message" class="contact__label">Your Message</label>
-										<textarea type="text" class="contact__input contact__textarea" id="message"></textarea>
+										<div class="contact__item">
+											<label for="formEmail" class="contact__label">Your Email</label>
+											<input type="email" class="contact__input _req _email" id="formEmail" name="email">
+										</div>
+
+										<div class="contact__item">
+											<label for="formMessage" class="contact__label">Your Message</label>
+											<textarea type="text" class="contact__input contact__textarea _req" id="formMessage" name="message"></textarea>
+										</div>
 
 										<button type="submit" class="btn">Send message</button>
 									</form>

@@ -9,13 +9,18 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 40px 35px;
+    padding: 4% 3.5%;
+
+    @include phone {
+      gap: 10px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0;
   }
 
   &__img {
@@ -25,9 +30,17 @@
     max-width: var(--size);
     width: 100%;
     height: var(--size);
+
+    @include tablet {
+      --size: 50px;
+    }
   }
 
   &__name {
     font-weight: 500;
+
+    @include phone {
+      font-size: 14px;
+    }
   }
 }
