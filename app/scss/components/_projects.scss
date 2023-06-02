@@ -5,7 +5,9 @@
   }
 
   &__slider {
-    padding-bottom: 60px;
+    @include tablet {
+      padding-bottom: 60px;
+    }
   }
 
   &__list {
@@ -63,6 +65,7 @@
     align-items: center;
     justify-content: space-evenly;
 
+    padding: 15px;
     background-color: var(--accent);
     opacity: 0.95;
     overflow: hidden;

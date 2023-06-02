@@ -2,6 +2,15 @@
 
   @include desctop {
     padding-top: 100px;
+    padding-bottom: 50px;
+
+    @include tablet {
+      padding-bottom: 40px;
+    }
+
+    @include phone {
+      padding-bottom: 20px;
+    }
   }
 
   &__inner {
@@ -16,8 +25,13 @@
       background-image: url(../../img/icons/hero-bg-figures-top.svg), url(../../img/icons/hero-bg-figures-bottom.svg);
       background-repeat: no-repeat;
       background-position-y: 5%, 95%;
-      background-position-x: -20%;
-      background-size: contain;
+      background-position-x: 50%;
+      background-size: 94%;
+    }
+
+    @include phone {
+      padding: 15px 25px 25px;
+      background-image: none;
     }
   }
 
@@ -71,9 +85,4 @@
     }
   }
 
-  &__btn-svg {
-    stroke: var(--text-color);
-    margin-left: 5px;
-    vertical-align: middle;
-  }
 }

@@ -8,6 +8,7 @@
     gap: 30px;
 
     @include tablet {
+      flex-direction: column-reverse;
       justify-content: center;
     }
   }
@@ -32,14 +33,39 @@
     color: var(--text-color);
     border: none;
     background-color: var(--input-color);
+    outline: transparent;
+
+    &:focus {
+      box-shadow: 0 0 8px 6px var(--box-shadow-color);
+    }
 
     &._error {
-      box-shadow: 0 0 15px red;
+      box-shadow: 0 0 15px 2px var(--additional);
     }
   }
 
   &__textarea {
-    height: 150px;
+    height: 128px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @include phone {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__btn {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__notification {
+    font-size: 16px;
+    color: var(--additional);
   }
 
   &__block {

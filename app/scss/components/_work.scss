@@ -8,6 +8,10 @@
 
   &__list {
     padding: 40px 35px;
+
+    @include phone {
+      padding: 15px 20px;
+    }
   }
 
   &__item {

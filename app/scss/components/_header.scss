@@ -21,33 +21,3 @@
     box-shadow: #372537db 0px 4px 6px 1px;
 	}
 }
-
-.menu {
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-    @include desctop {
-      flex-direction: row;
-    }
-  }
-
-  &__item {
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    font-size: 0;
-    background-color: var(--text-color);
-    border-radius: 50%;
-  }
-
-  &__svg {
-  }
-}

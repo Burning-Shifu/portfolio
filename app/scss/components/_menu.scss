@@ -1,0 +1,52 @@
+.menu {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include desctop {
+      flex-direction: row;
+    }
+
+    @include phone {
+      gap: 25px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:focus,
+    &:hover {
+      top: -2px;
+      box-shadow: 0px 3px 0px 1px #777676;
+
+      .menu__svg {
+        fill: var(--accent);
+        transition: fill 0.3s;
+      }
+    }
+
+    &:active {
+      top: 0;
+      box-shadow: inset 0px 3px 0px 1px #777676;
+    }
+  }
+
+  &__svg {
+  }
+}

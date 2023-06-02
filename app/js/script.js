@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const breakpoint = window.matchMedia( '(min-width:900px)' );
   // keep track of swiper instances to destroy later
   let mySwiper;
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
+
   const breakpointChecker = function() {
     // if larger viewport and multi-row layout needed
     if ( breakpoint.matches === true ) {
@@ -24,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return enableSwiper();
     }
   };
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
+
   const enableSwiper = function() {
     mySwiper = new Swiper ('.projects__slider', {
       slidesPerView: 1,
@@ -41,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
   };
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
+
   // keep an eye on viewport size changes
   breakpoint.addListener(breakpointChecker);
   // kickstart
@@ -53,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // form
 
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form'),
+        notify = form.querySelector('.contact__notification');
+
   form.addEventListener('submit', formSend);
 
   async function formSend(e) {
@@ -72,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         let result = await response.json();
-        alert(result.message);
+        notify.textContent = result.message;
         form.reset();
         form.classList.remove('_sending');
       } else {
@@ -81,27 +77,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
     } else {
-      alert("To send this form please fill all required fields")
+      notify.textContent = "Please try again!"
     }
   }
-
 
   function formValidate(e) {
     let error = 0;
     const formReq = document.querySelectorAll('._req');+
 
-    formReq.forEach((input, index) => {
+    formReq.forEach((input) => {
       formRemoveError(input);
 
       if (input.classList.contains('_email')) {
-        if (validateEmail(input)) {
+        let emailValidationResult = validateEmail(input);
+        if (emailValidationResult !== "valid") {
           formAddError(input);
           error++;
+          notify.textContent = emailValidationResult;
         }
       } else {
         if (input.value.trim() === "") {
           formAddError(input);
           error++;
+          notify.textContent = "Please fill all required fields!"
         }
       }
     });
@@ -116,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
     input.classList.remove('_error');
   }
   function validateEmail(input) {
-    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)) {
+      return "Please enter a valid email"; // This  message will be displayed
+    } else {
+      return "valid";
+    }
   }
 });

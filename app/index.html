@@ -150,9 +150,9 @@
 								<p class="hero__text">
 									Hi, I'm frontend developer who is truly passionate about bringing ideas to life through clean, efficient code. I love learning new technologies and continuously strive to grow my skills in this ever-evolving field. Being a frontend developer allows me to blend creativity with technical expertise, and I'm always excited to take on new challenges. Let's create something amazing together!
 								</p>
-								<a href="path_to_file" download="Resume_Protsiak" class="btn hero__btn">
+								<a class="btn btn--cat hero__btn" href="path_to_file" download="Resume_Protsiak">
 									Get my resume
-									<svg class="hero__btn-svg">
+									<svg class="btn__svg">
 										<use href="#download"></use>
 									</svg>
 								</a>
@@ -167,7 +167,7 @@
 							<h2 class="title">
 								Skills
 							</h2>
-							<p class="text skills__text col-7">
+							<p class="text skills__text col-7 col-sm-12">
 								I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
 							</p>
 							<ul class="skills__list block">
@@ -180,7 +180,7 @@
 									<span class="skills__name">CSS</span>
 								</li>
 								<li class="skills__item">
-									<img src="img/icons/skills/js-color-rounded.svg" class="skills__img" alt="" style="width: 70%;">
+									<img src="img/icons/skills/js-color.svg" class="skills__img" alt="" style="width: 70%;">
 									<span class="skills__name">JavaScript</span>
 								</li>
 								<li class="skills__item">
@@ -220,17 +220,20 @@
 							<h2 class="title">
 								Portfolio
 							</h2>
+							<p class="text col-7 col-sm-12">
+								Almost all websites made by me are in Russian. Hope this doesn't get in the way of your appreciation c:
+							</p>
 
 							<div class="swiper projects__slider">
 								<ul class="swiper-wrapper projects__list">
+
 									<li class="swiper-slide block projects__item">
 										<div class="projects__item-content">
 											<img src="img/projects/hotelcats.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">My second study website. Сonsists of 3 pages.</p>
 											</div>
 										</div>
-
 										<div class="projects__item-info">
 											<p class="projects__item-name">Cat Hotel</p>
 											<ul class="icon-links">
@@ -258,7 +261,7 @@
 										<div class="projects__item-content">
 											<img src="img/projects/starteam.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">This website was made while working at Affstar.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
@@ -288,7 +291,7 @@
 										<div class="projects__item-content">
 											<img src="img/projects/work-tutor.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">It simulates the passage of a quiz. At the very beginning there is a svg animation.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
@@ -318,7 +321,7 @@
 										<div class="projects__item-content">
 											<img src="img/projects/hungry-people.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">My first study website.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
@@ -348,7 +351,7 @@
 										<div class="projects__item-content">
 											<img src="img/projects/zebracall.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">This website was made while working at Affstar. Through this site, recruitment of employees to the call center took place.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
@@ -378,14 +381,14 @@
 										<div class="projects__item-content">
 											<img src="img/projects/diet-ai.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">text</p>
+												<p class="projects__item-descr">This website was made while working at Affstar. Сonsists of 3 pages.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
 											<p class="projects__item-name">Diet AI</p>
 											<ul class="icon-links">
 												<li class="icon-links__item">
-													<a class="icon-links__link" href="" target="_blank">
+													<a class="icon-links__link" href="https://burning-shifu.github.io/diet-ai/index.html" target="_blank">
 														<svg class="icon-links__svg icon-links__svg--stroke">
 															<use href="#link"></use>
 														</svg>
@@ -393,7 +396,7 @@
 													</a>
 												</li>
 												<li class="icon-links__item">
-													<a class="icon-links__link" href="" target="_blank">
+													<a class="icon-links__link" href="https://github.com/Burning-Shifu/diet-ai" target="_blank">
 														<svg class="icon-links__svg">
 															<use href="#github"></use>
 														</svg>
@@ -421,6 +424,17 @@
 								<li class="work__item">
 									<div class="col-5 col-sm-12">
 										<span class="work__title">Frontend Developer</span>
+										<span class="work__date">May 2023 – Today</span>
+									</div>
+									<div class="col-7 col-md-12">
+										<p class="work__text">
+											Volunteer job.
+										</p>
+									</div>
+								</li>
+								<li class="work__item">
+									<div class="col-5 col-sm-12">
+										<span class="work__title">Frontend Developer</span>
 										<span class="work__date">Oct 2020 – Nov 2022</span>
 									</div>
 									<div class="col-7 col-md-12">
@@ -436,11 +450,11 @@
 									</div>
 								</li>
 								<li class="work__item">
-									<div class="col-5">
+									<div class="col-5 col-sm-12">
 										<span class="work__title">Public Relations Specialist</span>
 										<span class="work__date">Sep 2017 – May 2020</span>
 									</div>
-									<div class="col-7 col-md-10">
+									<div class="col-7 col-md-12">
 										<p class="work__text">
 											I effectively managed the public image and reputation of the organization. I built strong relationships with media representatives and crafted compelling press releases, securing positive media coverage.
 										</p>
@@ -464,29 +478,33 @@
 								Happy to hear from you!
 							</h2>
 							<div class="contact__content row">
-								<div class="col-6 col-md-8 ">
+								<div class="col-6 col-md-8 col-sm-12">
 									<form action="#" class="contact__form block" id="contact-form">
 
 										<div class="contact__item">
-											<label for="formName" class="contact__label">Your Name</label>
+											<label for="formName" class="contact__label">Your Name *</label>
 											<input type="text" class="contact__input _req" id="formName" name="name">
 										</div>
 
 										<div class="contact__item">
-											<label for="formEmail" class="contact__label">Your Email</label>
+											<label for="formEmail" class="contact__label">Your Email *</label>
 											<input type="email" class="contact__input _req _email" id="formEmail" name="email">
 										</div>
 
 										<div class="contact__item">
-											<label for="formMessage" class="contact__label">Your Message</label>
+											<label for="formMessage" class="contact__label">Your Message *</label>
 											<textarea type="text" class="contact__input contact__textarea _req" id="formMessage" name="message"></textarea>
 										</div>
 
-										<button type="submit" class="btn">Send message</button>
+										<div class="contact__bottom">
+											<button type="submit" class="btn contact__btn">Send <br> message</button>
+											<span class="contact__notification"></span>
+										</div>
+
 									</form>
 								</div>
 
-								<div class="col-5 col-md-8">
+								<div class="col-5 col-md-8 col-sm-12">
 									<div class="block contact__block contact__block--bg">
 										<span class="contact__icon">
 											<svg class="contact__svg">
@@ -511,22 +529,28 @@
 										</span>
 										<div class="contact__stroke">
 											<span class="contact__stroke-title">Email:</span>
-											<span class="contact__stroke-text">kris.deniso@zohomail.com</span>
+											<span class="contact__stroke-text">
+												<a href="mailto:kris.deniso@zohomail.com">kris.deniso@zohomail.com</a>
+											</span>
 										</div>
 										<div class="contact__stroke">
 											<span class="contact__stroke-title">Phone:</span>
-											<span class="contact__stroke-text">+1 403 9217056</span>
+											<span class="contact__stroke-text">
+												<a href="tel:+14039217056">+1 403 9217056</a>
+											</span>
 										</div>
 										<div class="contact__stroke">
 											<span class="contact__stroke-title">Telegram:</span>
-											<span class="contact__stroke-text">@Burning_Shifu</span>
+											<span class="contact__stroke-text">
+												<a href="https://t.me/Burning_Shifu" target="_blank">@Burning_Shifu</a>
+											</span>
 										</div>
 										<div class="contact__stroke">
 											<span class="contact__stroke-title">Social links:</span>
 											<span class="contact__stroke-text">
 												<ul class="icon-links">
 													<li class="icon-links__item">
-														<a href="https://github.com/Burning-Shifu" class="icon-links__link">
+														<a href="https://github.com/Burning-Shifu" class="icon-links__link" target="_blank">
 															<svg class="icon-links__svg">
 																<use href="#github"></use>
 															</svg>
@@ -534,7 +558,7 @@
 														</a>
 													</li>
 													<li class="icon-links__item">
-														<a href="https://www.linkedin.com/in/kristina-protsiak-bb4a88257/" class="icon-links__link">
+														<a href="https://www.linkedin.com/in/kristina-protsiak-bb4a88257/" class="icon-links__link" target="_blank">
 															<svg class="icon-links__svg">
 																<use href="#linkedin"></use>
 															</svg>
