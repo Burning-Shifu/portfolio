@@ -1,5 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-const scss = require('gulp-sass');
+const scss = require('gulp-sass')(require('node-sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
 const concat = require('gulp-concat');
@@ -85,6 +85,7 @@ function stylesLibs() {
 	return src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/swiper/swiper-bundle.css',
+		'node_modules/modal-video/css/modal-video.css',
 	])
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 5 versions'],
@@ -101,6 +102,7 @@ function stylesLibs() {
 async function scriptsLibs() {
 	return src([
 		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/modal-video/js/modal-video.js',
 	])
 		.pipe(uglify())
 		.pipe(concat('libs.min.js'))
@@ -143,41 +145,12 @@ function clear() {
 
 //Конвертация и подключение шрифтов.//
 async function fonts() {
-	// конвертирует шрифты ttf в woff и woff2, Ее необходимо один раз запустить перед запуском проекта, затем запустить функцию gulp fontsStyle, и только после этого запустить gulp //
-	// src('app/fonts/*.ttf')
-	// 	.pipe(ttf2woff())
-	// 	.pipe(dest('dist/fonts/'));
-	// return src('app/fonts/*.ttf')
-	// 	.pipe(ttf2woff2())
-	// 	.pipe(dest('dist/fonts/'));
-
 	// перекидывает имеющиеся шрифты в dist
 	src('app/fonts/*.woff')
 		.pipe(dest('dist/fonts/'));
 	src('app/fonts/*.woff2')
 		.pipe(dest('dist/fonts/'));
 };
-
-// function fontsStyle() {
-// 	// Подключает шрифты с помощью миксинов в файл fonts.scss. После запуска в файле fonts.scss меняем семейство и корректируем вес шрифта //
-// 	let file_content = fs.readFileSync('app/scss/fonts.scss');
-// 	if (file_content == '') {
-// 		fs.writeFile('app/scss/fonts.scss', '', cb);
-// 		return fs.readdir('dist/fonts/', function (err, items) {
-// 			if (items) {
-// 				let c_fontname;
-// 				for (var i = 0; i < items.length; i++) {
-// 					let fontname = items[i].split('.');
-// 					fontname = fontname[0];
-// 					if (c_fontname != fontname) {
-// 						fs.appendFile('app/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
-// 					}
-// 					c_fontname = fontname;
-// 				}
-// 			}
-// 		})
-// 	}
-// }
 
 function cb() {
 }

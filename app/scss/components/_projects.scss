@@ -1,84 +1,92 @@
 .projects {
-  --item-width: 300px;
+	--item-width: 300px;
 
-  &__inner {
-  }
+	&__inner {
+	}
 
-  &__slider {
-    @include tablet {
-      padding-bottom: 60px;
-    }
-  }
+	&__slider {
+		@include tablet {
+			padding-bottom: 60px;
+		}
+	}
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 30px;
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		gap: 30px;
 
-    @include tablet {
-      display: flex;
-      gap: unset;
-    }
-  }
+		@include tablet {
+			display: flex;
+			gap: unset;
+		}
+	}
 
-  &__item {
-    max-width: var(--item-width);
-    width: 100%;
-    padding-bottom: 10px;
+	&__item {
+		max-width: var(--item-width);
+		width: 100%;
+		padding-bottom: 10px;
 
-    @include tablet {
-      max-width: 100%;
-    }
-  }
+		@include tablet {
+			max-width: 100%;
+		}
+	}
 
-  &__item-content {
-    position: relative;
-    margin-bottom: 10px;
-    overflow: hidden;
+	&__item-content {
+		position: relative;
+		margin-bottom: 10px;
+		overflow: hidden;
 
-    @media (any-hover: hover) {
-      &:hover {
-        .projects__item-hover {
-          top: 0%;
-        }
-      }
-    }
-  }
+		@media (any-hover: hover) {
+			&:hover {
+				.projects__item-hover {
+					top: 0%;
+				}
+			}
+		}
+	}
 
-  &__item-img {
-    width: 100%;
-    display: block;
-    height: var(--item-width);
-    object-fit: cover;
-  }
+	&__item-img {
+		width: 100%;
+		display: block;
+		height: var(--item-width);
+		object-fit: cover;
+	}
 
-  &__item-hover {
-    position: absolute;
-    top: 100%;
-    bottom: 0;
-    right: 0;
-    left: 0;
+	&__item-hover {
+		position: absolute;
+		top: 100%;
+		bottom: 0;
+		right: 0;
+		left: 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
 
-    padding: 15px;
-    background-color: var(--accent);
-    opacity: 0.95;
-    overflow: hidden;
-    transition: top 0.3s;
-  }
+		padding: 15px;
+		background-color: var(--accent);
+		opacity: 0.95;
+		overflow: hidden;
+		transition: top 0.3s;
 
-  &__item-name {
-    margin-bottom: 8px;
-    font-weight: 500;
-    text-align: center;
-  }
+		&._open {
+			top: 0%;
+		}
+	}
 
-  .swiper-pagination-bullet-active {
-    background-color: var(--additional);
-  }
+	&__item-name {
+		margin-bottom: 8px;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: var(--additional);
+	}
+}
+
+.modal-video {
+	background-color: rgba(0, 0, 0, 0.8);
 }

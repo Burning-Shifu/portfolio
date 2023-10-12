@@ -24,7 +24,7 @@
 							<a href="#hero" class="menu__link">
 								To start
 								<svg class="menu__svg">
-									<use href="#home"></use>
+									<use href="#person"></use>
 								</svg>
 							</a>
 						</li>
@@ -108,8 +108,8 @@
 						<li class="info__item">HTML</li>
 						<li class="info__item">CSS</li>
 						<li class="info__item">JavaScript</li>
-						<li class="info__item">Vue</li>
-						<li class="info__item">Vuetify</li>
+						<li class="info__item">React</li>
+						<li class="info__item">Typescript</li>
 						<li class="info__item">Bootstrap</li>
 						<li class="info__item">Sass</li>
 						<li class="info__item">Git</li>
@@ -150,7 +150,7 @@
 								<p class="hero__text">
 									Hi, I'm frontend developer who is truly passionate about bringing ideas to life through clean, efficient code. I love learning new technologies and continuously strive to grow my skills in this ever-evolving field. Being a frontend developer allows me to blend creativity with technical expertise, and I'm always excited to take on new challenges. Let's create something amazing together!
 								</p>
-								<a class="btn btn--cat hero__btn" href="path_to_file" download="Resume_Protsiak">
+								<a class="btn btn--cat hero__btn" href="Resume_K.Protsiak.pdf" download="Resume_Protsiak">
 									Get my resume
 									<svg class="btn__svg">
 										<use href="#download"></use>
@@ -184,8 +184,12 @@
 									<span class="skills__name">JavaScript</span>
 								</li>
 								<li class="skills__item">
-									<img src="img/icons/skills/vue.svg" class="skills__img" alt="">
-									<span class="skills__name">Vue</span>
+									<img src="img/icons/skills/react.svg" class="skills__img" alt="">
+									<span class="skills__name">React</span>
+								</li>
+								<li class="skills__item">
+									<img src="img/icons/skills/typescript.svg" class="skills__img" alt="">
+									<span class="skills__name">Typescript</span>
 								</li>
 							</ul>
 							<ul class="skills__list block">
@@ -200,10 +204,6 @@
 								<li class="skills__item">
 									<img src="img/icons/skills/sass-color.svg" class="skills__img" alt="">
 									<span class="skills__name">Sass</span>
-								</li>
-								<li class="skills__item">
-									<img src="img/icons/skills/vuetify-color.svg" class="skills__img" alt="">
-									<span class="skills__name">Vuetify</span>
 								</li>
 								<li class="skills__item">
 									<img src="img/icons/skills/bootstrap-color.svg" class="skills__img" alt="">
@@ -221,7 +221,7 @@
 								Portfolio
 							</h2>
 							<p class="text col-7 col-sm-12">
-								Almost all websites made by me are in Russian. Hope this doesn't get in the way of your appreciation c:
+								Almost all my websites are in Russian. Hope this doesn't get in the way of your appreciation c:
 							</p>
 
 							<div class="swiper projects__slider">
@@ -229,9 +229,39 @@
 
 									<li class="swiper-slide block projects__item">
 										<div class="projects__item-content">
+											<img src="img/projects/communityConnect.jpg" class="projects__item-img" alt="project illustration">
+											<div class="projects__item-hover">
+												<p class="projects__item-descr">Mentorship platform with two core user stories: mentor-seeking users and prospective mentors.</p>
+											</div>
+										</div>
+										<div class="projects__item-info">
+											<p class="projects__item-name">CommunityConnect</p>
+											<ul class="icon-links">
+												<li class="icon-links__item">
+													<a class="icon-links__link" href="https://community-builders-production-9472.up.railway.app/" target="_blank">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#link"></use>
+														</svg>
+														<span class="visually-hidden">Open project</span>
+													</a>
+												</li>
+												<li class="icon-links__item">
+													<a data-video-id="YhRfdJpVLiI" class="icon-links__link js-modal-btn">
+														<svg class="icon-links__svg icon-links__svg--stroke">
+															<use href="#video"></use>
+														</svg>
+														<span class="visually-hidden">Open video</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="swiper-slide block projects__item">
+										<div class="projects__item-content">
 											<img src="img/projects/hotelcats.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
-												<p class="projects__item-descr">My second study website. Сonsists of 3 pages.</p>
+												<p class="projects__item-descr">My study website. Сonsists of 3 pages.</p>
 											</div>
 										</div>
 										<div class="projects__item-info">
@@ -377,7 +407,7 @@
 										</div>
 									</li>
 
-									<li class="swiper-slide block projects__item">
+									<!-- <li class="swiper-slide block projects__item">
 										<div class="projects__item-content">
 											<img src="img/projects/diet-ai.jpg" class="projects__item-img" alt="project illustration">
 											<div class="projects__item-hover">
@@ -405,7 +435,7 @@
 												</li>
 											</ul>
 										</div>
-									</li>
+									</li> -->
 
 								</ul>
 								<div class="swiper-pagination projects__slider-pagination"></div>
@@ -428,7 +458,10 @@
 									</div>
 									<div class="col-7 col-md-12">
 										<p class="work__text">
-											Volunteer job.
+											I collaborated with a team to craft a project from scratch within a tight 3-month timeframe. As the Frontend Developer, I navigated the challenges of implementing intricate logic for two primary user stories centered on mentorship.
+										</p>
+										<p class="work__text">
+											My role demanded rapid upskilling in Typescript and Redux on-the-fly, which I swiftly integrated into our solution. Despite the time constraints and the complexity of the project, our team's synergy and my adaptability in mastering new technologies were pivotal in advancing our project's objectives.
 										</p>
 									</div>
 								</li>
@@ -584,9 +617,10 @@
 	<script src="js/script.js"></script>
 
 	<svg style="height: 0; width: 0; position: absolute;" xmlns="http://www.w3.org/2000/svg">
-		<symbol id="home" viewBox="0 0 18 18">
-			<title>Home</title>
-			<path d="M15 14.9999C15 15.1989 14.921 15.3896 14.7803 15.5303C14.6397 15.6709 14.4489 15.7499 14.25 15.7499H3.75C3.55109 15.7499 3.36032 15.6709 3.21967 15.5303C3.07902 15.3896 3 15.1989 3 14.9999V8.24994H0.75L8.49525 1.20894C8.63333 1.0833 8.81331 1.01367 9 1.01367C9.18669 1.01367 9.36667 1.0833 9.50475 1.20894L17.25 8.24994H15V14.9999Z"></path>
+		<symbol id="person" viewBox="0 0 18 18">
+			<title>Person</title>
+			<ellipse cx="9.2" cy="5.7" rx="4.7" ry="4.4"/>
+			<path d="M12.1,11.9l-1.4,1.3c-0.8,0.8-2,0.8-2.8,0l-1.5-1.4c-0.4-0.4-1-0.6-1.5-0.4C2.6,11.9,1,13.7,1,16v0.3 C1,17.2,1.8,18,2.8,18h13c1,0,1.8-0.8,1.8-1.7V16c0-2.2-1.5-4-3.7-4.5C13.2,11.3,12.5,11.5,12.1,11.9z"/>
 		</symbol>
 
 		<symbol id="projects-icon" viewBox="0 0 18 18">
@@ -631,6 +665,12 @@
 					<rect width="24" height="24"/>
 				</clipPath>
 			</defs>
+		</symbol>
+
+		<symbol id="video" viewBox="0 0 24 24" fill="none">
+			<title>Video</title>
+			<path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M15.0015 11.3344C15.3354 11.5569 15.5023 11.6682 15.5605 11.8085C15.6113 11.9311 15.6113 12.0689 15.5605 12.1915C15.5023 12.3318 15.3354 12.4431 15.0015 12.6656L11.2438 15.1708C10.8397 15.4402 10.6377 15.5749 10.4702 15.5649C10.3243 15.5561 10.1894 15.484 10.1012 15.3674C10 15.2336 10 14.9908 10 14.5052V9.49481C10 9.00923 10 8.76644 10.1012 8.63261C10.1894 8.51601 10.3243 8.44386 10.4702 8.43515C10.6377 8.42515 10.8397 8.55982 11.2438 8.82917L15.0015 11.3344Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 		</symbol>
 
 		<symbol id="download" viewBox="0 0 24 24">
